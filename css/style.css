@@ -278,6 +278,10 @@ section#main-content{
 		width:5000px;
 		height:100%;
 		margin-left:-40px;
+		webkit-transition:margin-left 0.3s ease-in-out;  
+   		-moz-transition:margin-left 0.3s ease-in-out;  
+   		-o-transition:margin-left 0.3s ease-in-out;  
+   		transition:margin-left 0.3s ease-in-out;  
 	}
 	
 	div[role='main'].home section#main-content > ul{
