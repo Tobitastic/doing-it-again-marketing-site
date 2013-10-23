@@ -222,14 +222,14 @@ header{
 	height:227px;
 	background:url(../img/dia_bg_top.jpg) repeat-x;
 	width:100%;
-	zoom:0.8;
+	zoom:0.35;
 }
 
 footer{
 	height:227px;
 	background:url(../img/dia_bg.gif) repeat-x;
 	width:100%;
-	zoom:0.8;
+	zoom:0.35;
 }
 
 div[role='main']{
@@ -266,12 +266,13 @@ nav#main-nav{
 
 section#main-content{
 	display:inline-block;	
-	width:600px;
+	width:602px;
 	margin:0 30px;
 	line-height:1.6em;
 	vertical-align:top;
 	height:466px;
 	overflow:hidden;
+	overflow-y:scroll;
 }
 	section#main-content > ul{
 		list-style-type:none;
@@ -287,8 +288,15 @@ section#main-content{
 	div[role='main'].home section#main-content > ul{
 		margin-left:-40px;
 	}
-	div[role='main'].about section#main-content > ul{
+	div[role='main'].media section#main-content > ul{
 		margin-left:-678px;
+	}
+	div[role='main'].trailer section#main-content > ul{
+		margin-left:-1316px;
+	}
+	
+	div[role='main'].preorder section#main-content > ul{
+		margin-left:-1954px;
 	}
 		section#main-content > ul > li{
 			display:inline-block;
@@ -305,12 +313,141 @@ a:hover,a:active,nav#main-nav a.active{
 	color:#ffa900;
 }
 
+section a,section a:visited{
+	color:#ffa900;
+}
+
+aside#preorder-items > ul{
+	list-style-type:none;
+	border-top:1px #333 solid;
+	padding:0;
+	margin:0;
+}
+
+	aside#preorder-items > ul > li {
+		margin:20px 10px;
+		vertical-align:top;
+		position:relative;
+	}
+	aside#preorder-items > ul > li > div.buy{
+		position:absolute;
+		right:0;
+		top:0;
+	}
+		aside#preorder-items > ul > li > div.buy > img{
+			max-width:100px;
+			height:auto;
+			width:100px;
+			vertical-align:top;
+			padding:10px 3px;
+		}
+		
+	aside#preorder-items > ul > li > div.meta{
+		display:inline-table;
+		line-height:1.8em;
+		font-size:0.85em;
+		width:400px;
+		border-collapse:collapse;
+		margin:10px;
+	}
+		aside#preorder-items > ul > li > div.meta > div.row{
+			display:table-row;
+			padding:0 10px;
+			border-bottom:dotted 1px #333;
+		}
+		aside#preorder-items > ul > li > div.meta > div.row.first{
+			font-size:1.6em;
+			line-height: 3.8em;
+		}
+	
+		aside#preorder-items > ul > li > div.meta > div.row > p{
+			padding:0 10px;
+			display:table-cell;
+		}
+		
+		aside#preorder-items > ul > li > div.meta > div.row > div{
+			display:inline-block;
+		}
+		
+		aside#preorder-items > ul > li > div.meta > div.row > p.left{
+			width:38%;
+			text-align:right;
+		}
+		
+		aside#preorder-items > ul > li > div.meta > div.row > p > strong{
+			color:#fe0072;		
+		}
 
 
-
-
-
-
+/*Jplayer stuff*/
+	div.jp-video div.jp-interface{
+		background:black;	
+		border-top:1px solid #3a3a3a !important ;	
+	}	
+	div.jp-video{
+		border:1px solid #3a3a3a !important ;	
+	}
+	div.jp-controls-holder {
+		top:0px;	
+		padding:8px;
+	}
+	
+	div.jp-video-360p{
+		width:600px !important;	
+	}	
+	
+	div.jp-seek-bar{
+		background:	#333;
+	}
+	div.jp-play-bar,div.jp-volume-bar-value{
+		background:	#fe0072;
+	}
+	
+	div.jp-volume-bar,div.jp-progress{
+		background:#333;
+	}
+	
+	a.jp-play,a.jp-play:hover {
+		background:url(../img/media-icons.png) top left;	
+	}
+	a.jp-pause,a.jp-pause:hover {
+		background:url(../img/media-icons.png) -21px 0px;	
+	}
+	a.jp-stop,a.jp-stop:hover {
+		background:url(../img/media-icons.png) -42px 0px;	
+	}
+	
+	a.jp-play, a.jp-play:hover, a.jp-pause,a.jp-pause:hover {
+		width: 21px;
+		height: 29px;
+	}
+	a.jp-stop, a.jp-stop:hover, a.jp-stop,a.jp-stop:hover {
+		width: 19px;
+		height: 20px;
+	}
+	a.jp-mute,a.jp-mute:hover,a.jp-unmute,a.jp-unmute:hover{
+		background:url(../img/media-icons.png) -88px 0px;
+		width:20px;
+		height:20px;
+		left:42px !important;	
+	}
+	a.jp-volume-max,a.jp-volume-max:hover{
+		background:url(../img/media-icons.png) -108px 0px;
+		width:22px;
+		height:20px;	
+	}
+	a.jp-full-screen,a.jp-full-screen:hover,a.jp-restore-screen,a.jp-restore-screen:hover{
+		background:url(../img/media-icons.png) -134px 0px;
+		width:22px !important;
+		height:20px !important;	
+	}
+	/*
+	a.jp-repeat,a.jp-repeat:hover,a.jp-repeat-off,a.jp-repeat-off:hover{
+		background:url(../img/media-icons.png) -65px 0px;
+		width:17px !important;
+		height:20px !important;	
+	}
+	*/
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
    ========================================================================== */
