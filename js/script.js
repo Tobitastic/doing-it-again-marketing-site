@@ -2,6 +2,7 @@
 
 */
 $(document).ready(function(){
+	//var hasHistory = false;
 	var hash = window.location.hash;
 	if ( !hash ){
 		hash = 'home';
@@ -13,12 +14,24 @@ $(document).ready(function(){
 		$('div[role=main]').addClass(className);
 		$('nav#main-nav a').removeClass();
 		$('nav#main-nav a[href*='+className+']').addClass('active');
+		/*
+		if (hasHistory ){
+			window.history.pushState({section:className},className,className+".html");
+		}*/
 	}
 	$('nav#main-nav a').click(function(e){
 		updateNav($(this).attr('href').substring(1));
 		return true;
 	});
-	
+	/*
+	if ( window.history || window.history.pushState ){
+		hasHistory = true;
+		window.onpopstate = function(e){
+			if ( window.location.hash != e.state.section) {
+				updateNav(e.state && e.state.section);	
+			}
+		}
+	}*/
 	$("#jquery_jplayer_1").jPlayer({
 		ready: function () {
 			$(this).jPlayer("setMedia", {

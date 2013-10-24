@@ -219,17 +219,15 @@ body{
 }
 
 header{
-	height:227px;
+	height:85px;
 	background:url(../img/dia_bg_top.jpg) repeat-x;
 	width:100%;
-	zoom:0.35;
 }
 
 footer{
-	height:227px;
+	height:85px;
 	background:url(../img/dia_bg.gif) repeat-x;
 	width:100%;
-	zoom:0.35;
 }
 
 div[role='main']{
