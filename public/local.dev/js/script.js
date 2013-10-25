@@ -2,36 +2,29 @@
 
 */
 $(document).ready(function(){
-	//var hasHistory = false;
-	var hash = window.location.hash;
-	if ( !hash ){
-		hash = 'home';
-	}else{
-		hash = hash.substring(1);
-	}
-	function updateNav(className){
+	var hasHistory = false;
+	function updateNav(className,ignoreStep){
 		$('div[role=main]').removeClass();
 		$('div[role=main]').addClass(className);
 		$('nav#main-nav a').removeClass();
 		$('nav#main-nav a[href*='+className+']').addClass('active');
-		/*
-		if (hasHistory ){
-			window.history.pushState({section:className},className,className+".html");
-		}*/
+		if (!ignoreStep&&hasHistory ){
+			window.history.pushState({section:className},className,"index.html#"+className);
+		}
 	}
 	$('nav#main-nav a').click(function(e){
 		updateNav($(this).attr('href').substring(1));
 		return true;
 	});
-	/*
+	
 	if ( window.history || window.history.pushState ){
 		hasHistory = true;
-		window.onpopstate = function(e){
-			if ( window.location.hash != e.state.section) {
-				updateNav(e.state && e.state.section);	
+		window.onpopstate = function(e) {
+			if (e.state && window.location.hash != e.state.section) {
+				updateNav((e.state && e.state.section)||'home',true);	
 			}
-		}
-	}*/
+		};
+	}
 	$("#jquery_jplayer_1").jPlayer({
 		ready: function () {
 			$(this).jPlayer("setMedia", {
@@ -47,12 +40,15 @@ $(document).ready(function(){
 		},
 		smoothPlayBar: true,
 		keyEnabled: true,
-		errorAlerts:true,
-		wmode:"window",
-		preload:'auto'
+		preload:'auto',
+		solution:'flash,html'
 	});
 	
-	updateNav(hash);
+	var hash = window.location.hash;
+	if ( hash ){
+		hash = hash.substring(1);
+		updateNav(hash);
+	}
 });
 
 
