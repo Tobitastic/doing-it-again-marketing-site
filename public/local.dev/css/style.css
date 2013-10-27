@@ -242,13 +242,13 @@ h1,h2,h3,h4,h5{
 	margin:0;
 }
 h1{
-	font-size:43px;
+	font-size:40px;
 	line-height:40px;
 }
 
 nav#main-nav{
 	font-family: 'Varela', sans-serif;
-	width:240px;
+	width:200px;
 	text-align:right;
 	border-right:solid 1px white;
 	padding-right:40px;
@@ -264,7 +264,7 @@ nav#main-nav{
 
 section#main-content{
 	display:inline-block;	
-	width:602px;
+	width:630px;
 	margin:0 30px;
 	line-height:1.6em;
 	vertical-align:top;
