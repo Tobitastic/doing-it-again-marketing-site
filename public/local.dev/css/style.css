@@ -333,11 +333,11 @@ aside#preorder-items > ul{
 		top:0;
 	}
 		aside#preorder-items > ul > li > div.buy > img{
-			max-width:100px;
-			height:auto;
-			width:100px;
-			vertical-align:top;
-			padding:10px 3px;
+			padding:40px 0 15px;
+		}
+		aside#preorder-items > ul > li > div.buy > form{
+			position:relative;
+			left:24px;		
 		}
 		
 	aside#preorder-items > ul > li > div.meta{
