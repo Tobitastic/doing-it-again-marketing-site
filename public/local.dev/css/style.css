@@ -215,7 +215,7 @@ body{
 	background:#202020;
 	font-family: "Courier 10 Pitch", "Courier Std", Consolas, Courier, FreeMono, "Nimbus Mono L", "Courier New", monospace;	
 	color:white;
-	font-size:13px;
+	font-size:15px;
 }
 
 header{
@@ -234,7 +234,7 @@ div[role='main']{
 	min-height:400px;
 	margin:0 auto;
 	width:960px;
-	padding:80px;
+	padding:40px;
 }
 
 h1,h2,h3,h4,h5{
@@ -355,11 +355,10 @@ aside#preorder-items > ul{
 		}
 		aside#preorder-items > ul > li > div.meta > div.row.first{
 			font-size:1.6em;
-			line-height: 3.8em;
 		}
-	
+			
 		aside#preorder-items > ul > li > div.meta > div.row > p{
-			padding:0 10px;
+			padding:5px 10px;
 			display:table-cell;
 		}
 		
@@ -374,6 +373,13 @@ aside#preorder-items > ul{
 		
 		aside#preorder-items > ul > li > div.meta > div.row > p > strong{
 			color:#fe0072;		
+		}
+		aside#preorder-items > ul > li > div.meta > div.row.first > p{
+			padding-bottom:15px;
+		}
+		aside#preorder-items > ul > li > div.meta > div.row > p.left{
+			/*padding-bottom:0px;*/
+			line-height:1.3em;
 		}
 
 
