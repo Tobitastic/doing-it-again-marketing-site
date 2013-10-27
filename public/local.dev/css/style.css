@@ -212,7 +212,7 @@ td { vertical-align: top; }
    ========================================================================== */
 
 body{
-	background:#202020;
+	background:url(../img/bg.jpg) #202020 left top;
 	font-family: "Courier 10 Pitch", "Courier Std", Consolas, Courier, FreeMono, "Nimbus Mono L", "Courier New", monospace;	
 	color:white;
 	font-size:15px;
@@ -260,6 +260,13 @@ nav#main-nav{
 	}
 	nav#main-nav ul li{
 		margin:10px 0px;
+	}
+	nav#main-nav > img{
+		-webkit-border-radius: 100px;
+		border-radius: 100px;
+		background:#202020;
+		border: solid white 4px;
+		padding:15px;
 	}
 
 section#main-content{
