@@ -276,7 +276,7 @@ section#main-content{
 		list-style-type:none;
 		width:5000px;
 		height:100%;
-		margin-left:-40px;
+		margin:0 -40px 0 0;
 		webkit-transition:margin-left 0.3s ease-in-out;  
    		-moz-transition:margin-left 0.3s ease-in-out;  
    		-o-transition:margin-left 0.3s ease-in-out;  
