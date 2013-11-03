@@ -113,6 +113,7 @@ nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0
  */
 
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+#cover { width: 250px; height: 356px; float:right; margin: 0 0 20px 20px; padding-right:20px; }
 
 /*
  * Correct overflow not hidden in IE9 
